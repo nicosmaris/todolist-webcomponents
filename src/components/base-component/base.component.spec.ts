@@ -23,11 +23,11 @@ describe('Base Component Spec:', () => {
       expect(button).toBeTruthy();
     });
 
-    it('should set the "You click the button!" on click testButton button', () => {
+    it('should set the "You click this button!" on click testButton button', () => {
       const button = shadow.querySelector('#testButton') as HTMLButtonElement;
       const message = shadow.getElementById('testMessage') as HTMLElement;
       button.click();
-      expect(message.innerText).toEqual('You click the button!');
+      expect(message.innerText).toEqual('You click this button!');
     });
 
     it('should have "attributeValue" empty if "data-attribute" is not present', () => {
