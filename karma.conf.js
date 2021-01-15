@@ -5,6 +5,7 @@ const { string } = require('rollup-plugin-string');
 const resolve = require('@rollup/plugin-node-resolve');
 const commonjs = require('@rollup/plugin-commonjs');
 
+process.env.CHROME_BIN = require('puppeteer').executablePath()
 // Karma configuration
 // Generated on Sun Feb 16 2020 01:08:31 GMT+0100 (Central European Standard Time)
 module.exports = function(config) {
@@ -81,7 +82,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome', 'Firefox'],
+    browsers: ['ChromeHeadless'],
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits

@@ -97,7 +97,7 @@ export default class BaseComponent extends HTMLElement {
     if (target.id === 'testButton') {
       event.preventDefault();
       const testMessage = shadow.getElementById('testMessage') as HTMLElement;
-      testMessage.innerHTML = 'You click the button!';
+      testMessage.innerHTML = 'You click this button!';
     }
   }
 }
